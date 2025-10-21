@@ -1,0 +1,61 @@
+Taskk 111........
+#include <iostream>
+using namespace std;
+int main() {
+    char str[100];
+    cin >> str;
+    int i = 0, flag = 0;
+    while (str[i] != '\0') {
+        if (str[i] < '0' || str[i] > '9') {
+            flag = 1;
+            break;
+        }
+        i++;
+    }
+    if (flag == 0)
+        cout << "Numeric constant";
+    else
+        cout << "Not numeric";
+    return 0;
+}
+
+Task222222.....
+#include <iostream>
+using namespace std;
+int main() {
+    char exp[100];
+    cin >> exp;
+    char op[] = {'+', '-', '*', '/', '%', '=', '\0'};
+    int i = 0, count = 1;
+    while (exp[i] != '\0') {
+        for (int j = 0; op[j] != '\0'; j++) {
+            if (exp[i] == op[j]) {
+                cout << "operator" << count << ":  " << exp[i] << endl;
+                count++;
+            }
+        }
+        i++;
+    }
+    return 0;
+}
+
+
+
+
+single line
+#include <iostream>
+using namespace std;
+int main() {
+    char str[200];
+    cin.getline(str, 200);
+    if (str[0] == '/' && str[1] == '/')
+        {cout << "Single line comment";}
+    
+        //cout << "Not a comment";
+     else
+        cout << "Not a comment";
+    return 0;
+}
+
+
+
